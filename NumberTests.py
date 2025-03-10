@@ -1,5 +1,9 @@
 #NumberTests.py
 
+def isPalindrome(n):
+  """Determines if a number is a palindrome"""
+  
+
 def isThreeOrFive(n):
   """Returns boolean determination if number is multiple of 3 or 5"""
 
@@ -14,6 +18,7 @@ def isPrime(p):
     return True
   if isEven(p):
     return False
+  
   for div in range (3, p // 2, 2):
     if p % div == 0:
       return False
@@ -22,7 +27,7 @@ def isPrime(p):
 def getFactors(n):
   """Returns a list of all factors of a given integer"""
   factors =[]
-  for f in range(1, n):
+  for f in range(1, n//2+1):
     if n % f == 0:
       factors.append(f)
   return factors
